@@ -1,0 +1,45 @@
+---------------------------
+Reddit Scraper Configuration Guide
+---------------------------
+
+This guide helps you set up the necessary environment and credentials for running the Reddit scraper tool.
+
+1. **Setting up Reddit API credentials**:
+   - Visit https://www.reddit.com/prefs/apps
+   - Scroll down to the "Developed Applications" section and click "Create App" or "Create Another App".
+   - Fill in the details:
+     - `name`: Name of your app/tool (e.g., "RedditScraper")
+     - `App type`: Script
+     - `description`: You can leave this blank.
+     - `permissions`: Read
+     - `redirect uri`: http://localhost:8080
+     - Other fields as necessary.
+   - Click "Create app".
+   - Once created, you will see your `CLIENT_ID` (right under the app name) and `CLIENT_SECRET` (inside the app details). Make note of these.
+
+2. **Configuring the reddit_scraper.py**:
+   - Open the reddit_scraper.py file in a text editor.
+   - Fill in the `CLIENT_ID`, `CLIENT_SECRET`, and `USER_AGENT` fields with your Reddit API credentials.
+     - `USER_AGENT`: A unique description of your script. For instance, "reddit_scraper_v1.0"
+
+3. **Installing necessary Python libraries**:
+   - Ensure you have Python installed.
+   - Open a terminal or command prompt.
+   - Run: 
+     ```
+     pip install praw textblob
+     ```
+   - Additionally, for sentiment analysis, download the necessary corpora for TextBlob:
+     ```
+     python -m textblob.download_corpora
+     ```
+
+4. **Running the script**:
+   - Once everything is set up, navigate to the directory containing the script using the terminal or command prompt.
+   - Run the script with:
+     ```
+     python reddit_scraper.py
+     ```
+
+Enjoy tracking the Reddit trends!
+

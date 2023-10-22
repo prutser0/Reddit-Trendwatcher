@@ -1,0 +1,4 @@
+# sentiment_analysis.py
+# Before running this code, ensure you have the textblob library installed and also download the necessary corpora using:
+pip install textblob
+python -m textblob.download_corpora
